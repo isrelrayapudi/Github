@@ -45,6 +45,12 @@ Get all values match
     ${output}=    Set Variable    io.leitstand.actor.events.diagnosis.NspOntResetResponse successfully produced the event.
     Should Contain    ${output}    successfully produced the event
     Log    ${output}
+Get Onu Serial Numbers
+    [Tags]    sanity
+    ${msg}=    Set Variable    "io.leitstand.actor.events.diagnosis.NspOntResetResponse"
+    ${output}=    Set Variable    ENABLED
+    Log    ${output}
+    Sleep    2s
 
 
 
